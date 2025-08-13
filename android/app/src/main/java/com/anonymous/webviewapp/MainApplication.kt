@@ -1,4 +1,4 @@
-package com.webviewapp.naver
+package com.anonymous.webviewapp
 
 import android.app.Application
 import android.content.res.Configuration

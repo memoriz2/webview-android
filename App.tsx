@@ -5,12 +5,12 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 import LocationPermission from "./components/LocationPermission";
 import WebViewComponent from "./components/WebView";
+import NotificationPermissions from "./components/NotificationPermissions";
 
 const Tab = createBottomTabNavigator();
 
 export default function App() {
   console.log("App.tsx 렌더링 시작");
-
   return (
     <NavigationContainer>
       <StatusBar style="light" backgroundColor="#2196F3" />
@@ -24,6 +24,8 @@ export default function App() {
               iconName = focused ? "location" : "location-outline";
             } else if (route.name === "WebView") {
               iconName = focused ? "globe" : "globe-outline";
+            } else if (route.name === "Notifications") {
+              iconName = focused ? "notifications" : "notifications-outline";
             } else {
               iconName = "help-outline";
             }
@@ -58,6 +60,18 @@ export default function App() {
           listeners={{
             tabPress: () => console.log("웹뷰 탭 클릭됨"),
             focus: () => console.log("웹뷰 탭 포커스됨"),
+          }}
+        />
+        <Tab.Screen
+          name="Notifications"
+          component={NotificationPermissions}
+          options={{
+            title: "알림",
+            tabBarLabel: "알림",
+          }}
+          listeners={{
+            tabPress: () => console.log("알림 탭 클릭됨"),
+            focus: () => console.log("알림 탭 포커스됨"),
           }}
         />
         <Tab.Screen
