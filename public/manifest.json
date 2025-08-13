@@ -1,0 +1,27 @@
+{
+  "name": "네이버 웹뷰 앱",
+  "short_name": "네이버",
+  "description": "네이버 웹사이트를 모바일 앱에서 사용할 수 있는 PWA",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#03c75a",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "utilities"],
+  "lang": "ko",
+  "dir": "ltr"
+}
