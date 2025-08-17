@@ -21,6 +21,14 @@
         "android.permission.POST_NOTIFICATIONS"
       ],
       "package": "com.anonymous.webviewapp"
+    },
+    "plugins": [
+      "expo-secure-store"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "a78097b8-9767-428a-8d27-008d34765feb"
+      }
     }
   }
 }
